@@ -14,7 +14,7 @@ def format_homepage(filename='index.html'):
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Homepage</title>
+            <title>boodoo.dev</title>
             """ + r"""
             <style>
                 body {
@@ -73,17 +73,27 @@ def format_homepage(filename='index.html'):
             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
             ░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░  
-</pre><pre>                                                                                    
-                                                                                    
-- Writeups\n
+</pre><pre>    
+
+
+
+Writeups\n
 """)
 
         for d in dirs:
             html_file.write(f'  - <a href="{d}/">{d}</a>\n')
 
         html_file.write("""
+                        
+                        
 
-- Resume
+- <a href="/resume.html">Resume</a>
+                        
+- <a target="_blank" rel="noopener noreferrer" href="https://github.com/Focusucof">GitHub</a>
+                        
+- <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/devin-boodoo-287a27272/">LinkedIn</a>
+
+- <a href="mailto:devinoboodoo@gmail.com">Contact</a>
         </pre>
         </body>
         </html>
@@ -132,7 +142,7 @@ def txt_to_html(input_file, output_file, center=False):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formatted Text</title>
+        <title>boodoo.dev</title>
         <style>""" + r"""
             body {
                 color: #FEFEFE;
