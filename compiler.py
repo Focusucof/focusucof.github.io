@@ -3,9 +3,14 @@ import argparse
 import os
 
 def format_homepage(filename='index.html'):
+    files = []
+    with open(".compiler_ignore", 'r') as compiler_ignore:
+        content = compiler_ignore.read()
+        files = [f for f in os.listdir('.') if not os.path.isdir(f) and not f in content and f.endswith(".html")]
+
     dirs = [d for d in os.listdir('.') if os.path.isdir(d) and not d.startswith('.')]
     dirs.sort()
-    print(dirs)
+    print(files)
 
     with open(filename, 'w') as html_file:
         html_file.write(f"""
@@ -82,7 +87,10 @@ Writeups\n
 """)
 
         for d in dirs:
-            html_file.write(f'  - <a href="{d}/">{d}</a>\n')
+            html_file.write(f'  - <a href="{d}/">{d}/</a>\n')
+
+        for f in files:
+            html_file.write(f'  - <a href="{f}">{f.split(".")[0].replace("_", " ")}</a>\n')
 
         html_file.write("""
                         

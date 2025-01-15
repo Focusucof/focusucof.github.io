@@ -1,0 +1,14 @@
+index.txt
+index.html
+
+resume.txt
+resume.html
+Devin_Boodoo_Resume.pdf
+
+unifont.woff
+.gitignore
+
+compiler.py
+.compiler_ignore
+
+*.txt
