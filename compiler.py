@@ -9,55 +9,55 @@ def format_homepage(filename='index.html'):
 
     with open(filename, 'w') as html_file:
         html_file.write(f"""
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>boodoo.dev</title>
-            """ + r"""
-            <style>
-                body {
-                    color: #FEFEFE;
-                    background-color: #0A0B11;
-                    margin: 0 auto;
-                    padding: 1em 0 1em 0;
-                }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>boodoo.dev</title>
+""" + r"""
+<style>
+body {
+    color: #FEFEFE;
+    background-color: #0A0B11;
+    margin: 0 auto;
+    padding: 1em 0 1em 0;
+}
 
-                a {
-                    color: #93ffd7;
-                    text-decoration: none;
-                }
+a {
+    color: #93ffd7;
+    text-decoration: none;
+}
 
-                @font-face {
-                    font-family: "unifont";
-                    src: url("./unifont.woff") format('woff');
-                }
+@font-face {
+    font-family: "unifont";
+    src: url("./unifont.woff") format('woff');
+}
 
-                pre {
-                    font-family: "unifont", "Lucida Console", monospace, Monaco;
-                    font-size: 16px;
-                    line-height: 1.0;
-                    padding-left: 20px;
-                }
+pre {
+    font-family: "unifont", "Lucida Console", monospace, Monaco;
+    font-size: 16px;
+    line-height: 1.0;
+    padding-left: 20px;
+}
 
-                .header {
-                    font-family: "unifont", "Lucida Console", monospace, Monaco;
-                    font-size: 14px;
-                    line-height: 1.0;
-                    padding-left: 20px;
-                }
+.header {
+    font-family: "unifont", "Lucida Console", monospace, Monaco;
+    font-size: 14px;
+    line-height: 1.0;
+    padding-left: 20px;
+}
 
-                .txtdiv {
-                    display: block;
-                    text-align: left;
-                }
-        </style>
-        """ + f"""
-        </head>
+.txtdiv {
+    display: block;
+    text-align: left;
+}
+</style>
+""" + f"""
+</head>
 
-        <body>
-            <pre class="header">
+<body>
+<pre class="header">
 ░▒▓███████▓▒░░▒▓████████▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓███████▓▒░  
 ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
 ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░       ░▒▓█▓▒▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
@@ -73,7 +73,8 @@ def format_homepage(filename='index.html'):
             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
             ░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░  
-</pre><pre>    
+</pre>
+<pre>    
 
 
 
@@ -85,7 +86,7 @@ Writeups\n
 
         html_file.write("""
                         
-                        
+
 
 - <a href="/resume.html">Resume</a>
                         
@@ -94,9 +95,9 @@ Writeups\n
 - <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/devin-boodoo-287a27272/">LinkedIn</a>
 
 - <a href="mailto:devinoboodoo@gmail.com">Contact</a>
-        </pre>
-        </body>
-        </html>
+</pre>
+</body>
+</html>
         """)
 
 def text_format(input_file, output_file):
