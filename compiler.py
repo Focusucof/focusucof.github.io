@@ -112,11 +112,12 @@ def txt_to_html(input_file, output_file, center=False):
 
     wrapped_content = ''
     for line in content.split('\n'):
+        leading_spaces = len(line) - len(line.lstrip(' '))
         while len(line) > 83:
             split_index = line[:83].rfind(' ')
             if split_index == -1:
                 split_index = 83
-            wrapped_content += line[:split_index] + '\n'
+            wrapped_content += line[:split_index] + '\n' + ' ' * leading_spaces
             line = line[split_index:].lstrip()
         wrapped_content += line + '\n'
 

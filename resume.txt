@@ -1,4 +1,8 @@
-Devin Boodoo
+<span style="font-size: 22pt">Devin Boodoo</span>
+
+
+
+
 
 ...................................................................................
 
@@ -14,39 +18,35 @@ Education
 
 Experience
 
-    CodeNinjas
-    Apr 2023 - Present
-    Code Sensei
+    CodeNinjas                                                   Apr 2023 - Present
+    <span style="font-size: 10pt">Code Sensei</span>
         • Lead coding lessons to facilitate comprehensive learning and skill development.
         • Designed and organized a dynamic and engaging summer camp program, overseeing planning, scheduling, and implementation.
 
-    DJDevToronto
-    May 2023 - Present
+    DJDevToronto                                                 May 2023 - Present
+    <span style="font-size: 10pt">DJ & Music Production</span>
         • Assemble and optimize audio systems, configuring amplifiers, speakers, and equipment for optimal sound quality during live performances.
         • Proficiently manage Instagram and TikTok accounts, consistently posting content to drive community engagement.
 
-    West Hill CI Student Council
-    May 2023 - Jun 2024
-    Media Editor
-        • Created and managed engaging Instagram content, including posts and announcements, to effectively communicate messages and enhance online presence.
+    West Hill CI Student Council                                May 2023 - Jun 2024
+    <span style="font-size: 10pt">Media Editor</span>
+        • Created and managed engaging Instagram content, including posts and announcements, to effectively communicate messages and enhance online 
+        presence.
 
-    West Hill CI Tech Crew
-    Oct 2022 - Jun 2024
-    Production Crew
+    West Hill CI Tech Crew                                      Oct 2022 - Jun 2024
+    <span style="font-size: 10pt">Production Crew</span
         • Plan and organize community events.
         • Managed sound and stage lighting equipment.
         • Maintenance & reconfiguration of lighting systems.
 
-    West Hill CI Yearbook Committee
-    Jan 2023 - Jun 2023
-    Yearbook Editor
+    West Hill CI Yearbook Committee                             Jan 2023 - Jun 2023
+    <span style="font-size: 10pt">Yearbook Editor</span>
         • Attend weekly meetings
         • Communicate and coordinate with publisher to meet deadlines
         • Photograph and design page layouts
 
-    Approved Financial Services
-    Nov 2021 - Sep 2022
-    Customer Service Rep.
+    Approved Financial Services                                 Nov 2021 - Sep 2022
+    <span style="font-size: 10pt">Customer Service Rep.</span>
         • Scheduled appointments on behalf of agents
         • Managed and catalogued client documents
         • Entered client data into company database
@@ -55,14 +55,14 @@ Experience
 
 Skills
 
-    Front-End Development
+    Front-End Development:
     HTML & CSS, JavaScript, ReactJS, Next.JS, NodeJS
 
-    Back-End Development
+    Back-End Development:
     NodeJS, Python, C++, MongoDB, SQL
 
-    DevOps
+    DevOps:
     Linux, NGINX, Docker, Git, AWS
 
-    Design & Media
+    Design & Media:
     Adobe Photoshop, Adobe Premiere Pro, Canva, Figma
