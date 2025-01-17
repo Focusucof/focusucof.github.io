@@ -78,6 +78,8 @@ pre {
             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
             ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░ 
             ░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░░▒▓███████▓▒░ ░▒▓██████▓▒░ ░▒▓██████▓▒░  
+
+            Cybersecurity. Programming. Music.
 </pre>
 <pre>    
 
@@ -102,7 +104,29 @@ Writeups\n
                         
 - <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/devin-boodoo-287a27272/">LinkedIn</a>
 
+- <a target="_blank" rel="noopener noreferrer" href="https://hackerone.com/focusucof">HackerOne</a>
+
 - <a href="mailto:devinoboodoo@gmail.com">Contact</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Inpsired by tmpout.sh
 </pre>
 </body>
 </html>
