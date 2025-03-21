@@ -1,0 +1,111 @@
+<span class="c">
+                                  (     
+                      (     *   ) )\ )  
+       (              )\  ` )  /((()/(  
+ `  )  )\   (   (   (((_)  ( )(_))/(_)) 
+ /(/( ((_)  )\  )\  )\___ (_(_())(_))_| 
+((_)_\ (_) ((_)((_)((/ __||_   _|| |_   
+| '_ \)| |/ _|/ _ \ | (__   | |  | __|  
+| .__/ |_|\__|\___/  \___|  |_|  |_|    
+|_|                                     
+
+
+</span>
+
+<span class="c">
++-------------------------------+
+| PIE-TIME: Binary Exploitation |
++-------------------------------+
+|    Description:    |
++--------------------+
+
+Can you try to get the flag? Beware we have PIE!
+</span>
+
+
+
+
+
+1. Introduction
+
+This challenge was quite simple to solve. We are given two files: <code>vuln.c</code> and the
+binary <code>vuln</code>. 
+
+
+vuln.c
+================================================================================================
+<pre>
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;signal.h&gt;
+#include &lt;unistd.h&gt;
+
+void segfault_handler() {
+  printf("Segfault Occurred, incorrect address.\n");
+  exit(0);
+}
+
+int win() {
+  FILE *fptr;
+  char c;
+
+  printf("You won!\n");
+  // Open file
+  fptr = fopen("flag.txt", "r");
+  if (fptr == NULL)
+  {
+      printf("Cannot open file.\n");
+      exit(0);
+  }
+
+  // Read contents from file
+  c = fgetc(fptr);
+  while (c != EOF)
+  {
+      printf ("%c", c);
+      c = fgetc(fptr);
+  }
+
+  printf("\n");
+  fclose(fptr);
+}
+
+int main() {
+  signal(SIGSEGV, segfault_handler);
+  setvbuf(stdout, NULL, _IONBF, 0); // _IONBF = Unbuffered
+
+  printf("Address of main: %p\n", &main);
+
+  unsigned long val;
+  printf("Enter the address to jump to, ex => 0x12345: ");
+  scanf("%lx", &val);
+  printf("Your input: %lx\n", val);
+
+  void (*foo)(void) = (void (*)())val;
+  foo();
+}
+</pre>
+================================================================================================
+
+From looking at the source code we see the function win() which will print the flag but it never
+gets called in the program. In main(), we see
+
+================================================================================================
+<pre>
+printf("Address of main: %p\n", &main);
+
+unsigned long val;
+printf("Enter the address to jump to, ex => 0x12345: ");
+scanf("%lx", &val);
+printf("Your input: %lx\n", val);
+
+void (*foo)(void) = (void (*)())val;
+foo();
+</pre>
+================================================================================================
+
+This will print out the address of the main function in memory, then ask for an address of which
+the program will jump to. In order to exploit the address functionality to get the flag, we need 
+to figure out the address of the win() function. To do this we can use the command:
+<code>readelf -s vuln</code>
+

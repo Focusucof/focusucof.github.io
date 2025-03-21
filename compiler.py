@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import argparse
 import os
@@ -24,7 +26,7 @@ def format_homepage(filename='index.html'):
 <style>
 body {
     color: #FEFEFE;
-    background-color: #0A0B11;
+    background-color: #101011;
     margin: 0 auto;
     padding: 1em 0 1em 0;
 }
@@ -89,10 +91,11 @@ Writeups\n
 """)
 
         for d in dirs:
-            html_file.write(f'  - <a href="{d}/">{d}/</a>\n')
+            html_file.write(f'- <a href="{d}/">{d}/</a>\n')
 
         for f in files:
-            html_file.write(f'  - <a href="{f}">{f.split(".")[0].replace("_", " ")}</a>\n')
+            html_file.write(f'- <a href="{f.replace(" ", "%20").replace(":", "%3A")}">{f.split(".")[0].replace("_", " ")}</a>\n')
+            
 
         html_file.write("""
                         
@@ -138,10 +141,10 @@ def text_format(input_file, output_file):
 
     wrapped_content = ''
     for line in content.split('\n'):
-        while len(line) > 83:
-            split_index = line[:83].rfind(' ')
+        while len(line) > 100:
+            split_index = line[:100].rfind(' ')
             if split_index == -1:
-                split_index = 83
+                split_index = 100
             wrapped_content += line[:split_index] + '\n'
             line = line[split_index:].lstrip()
         wrapped_content += line + '\n'
@@ -156,10 +159,10 @@ def txt_to_html(input_file, output_file, center=False):
     wrapped_content = ''
     for line in content.split('\n'):
         leading_spaces = len(line) - len(line.lstrip(' '))
-        while len(line) > 83:
-            split_index = line[:83].rfind(' ')
+        while len(line) > 100:
+            split_index = line[:100].rfind(' ')
             if split_index == -1:
-                split_index = 83
+                split_index = 100
             wrapped_content += line[:split_index] + '\n' + ' ' * leading_spaces
             line = line[split_index:].lstrip()
         wrapped_content += line + '\n'
@@ -177,9 +180,22 @@ def txt_to_html(input_file, output_file, center=False):
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>boodoo.dev</title>
         <style>""" + r"""
+            code {
+                background-color: #1f1f1f;
+                color: #FEFEFE;
+                font-size: 85%;
+                padding: 1px 4px;
+                border-radius: 3px;
+            }
+
+            .c {
+                display: block;
+                text-align: center;
+            }
+
             body {
                 color: #FEFEFE;
-                background-color: #0A0B11;
+                background-color: #101011;
                 margin: 0 auto;
                 padding: 1em 0 1em 0;
             }
